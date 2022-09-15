@@ -15,8 +15,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.CR_PAT }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_PAT }}
       - name: Current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
