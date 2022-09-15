@@ -5,7 +5,7 @@ FROM lukechilds/dockerpi:vm
 
 LABEL maintainer="Artem Vasiunik <artem30801@gmail.com>"
 
-ARG FILESYSTEM_IMAGE_URL="https://github.com/CopterExpress/clover/releases/download/v0.22/clover_v0.22.img.zip"
+ARG FILESYSTEM_IMAGE_URL="https://github.com/CopterExpress/clover/releases/download/v0.23/clover_v0.23.img.zip"
 ADD $FILESYSTEM_IMAGE_URL /filesystem.zip
 
 # entrypoint.sh has been added in the parent lukechilds/dockerpi:vm
