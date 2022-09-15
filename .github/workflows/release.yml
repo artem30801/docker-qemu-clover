@@ -19,7 +19,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHCR_PAT }}
       - name: Build image with latest tag
         run: docker build -t ghcr.io/${{ github.repository }}:${{ steps.get_version.outputs.VERSION }} .
       - name: Push image to ghcr.io
